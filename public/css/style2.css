@@ -1,0 +1,17 @@
+#cal{
+    width: 80%;
+    margin-top: 3%;
+    margin-left: 10%;
+    background:no-repeat;
+}
+.container{
+    background: linear-gradient(to top,cyan, white);
+
+}
+li{
+    width: 30%;
+    text-align: center;
+}
+#principal{
+
+}

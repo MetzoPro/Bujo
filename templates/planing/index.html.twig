@@ -1,0 +1,84 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Planing{% endblock %}
+
+{% block body %}
+
+    <div id="principal">
+
+
+        <select class="btn btn-success" onchange="handleOnChangeEvent(this.value)">
+            <option value="pictures/flower1.jpg">change template</option>
+            <option value="pictures/flower2.jpg">change template</option>
+            <option value="pictures/flower3.jpg">change template</option>
+            <option value="pictures/flower4.jpg">change template</option>
+            <option value="pictures/flower5.jpg">change template</option>
+            <option value="pictures/flower7.jpg">change template</option>
+        </select>
+
+        <div class="container">
+
+            <ul  class="nav nav-tabs">
+
+                <li  class="nav-item">
+                    <a class="nav-link active" href="#cal">planing</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#menu1">To do list</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#menu2">Personal diary</a>
+                </li>
+            </ul>
+            <div   class="tab-content border mb-3">
+                <div id="cal" class="container tab-pane active" ></div>
+                <div id="menu1" class="container tab-pane fade"><br></div>
+                <div id="menu2" class="container tab-pane fade"><br></div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
+    {% block javascripts %}
+
+        <script>
+            window.onload = () => {
+                let  calendarElt = document.querySelector("#cal")
+                let  calendar   = new FullCalendar.Calendar(calendarElt,{
+                    initialView :'dayGridMonth',
+                    locale: 'fr',
+                    timeZone: 'Europe/Paris',
+                    headerToolbar:{
+                        start : 'prev,next today',
+                        center: 'title',
+                        end:'dayGridMonth,timeGridWeek'
+                    },
+                    events: {{ data|raw }},
+                    editable:true,
+                    eventResizableFromStart:true,
+                    eventResize:true,
+                })
+                calendar.on('eventChange',(e)=>{
+                    console.log(e)
+                })
+                calendar.on('eventChange', (e) => {
+                    let url = `/api/${e.event.id}/edit`
+                    let donnees = {
+                        "title": e.event.title,
+                        "description": e.event.extendedProps.description,
+                        "start": e.event.start,
+                        "end": e.event.end,
+                        "backgroundColor": e.event.backgroundColor,
+                        "borderColor": e.event.borderColor,
+                        "textColor": e.event.textColor,
+                        "allDay": e.event.allDay
+                    }
+                    let xhr = new XMLHttpRequest
+                    xhr.open("PUT", url)
+                    xhr.send(JSON.stringify(donnees))
+                })
+                calendar.render()
+            }
+        </script>
+    {% endblock %}
+

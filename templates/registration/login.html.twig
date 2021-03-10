@@ -1,0 +1,20 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+<div class="row">
+    <form class="col s12" action="{{ path('app_login') }}" method="post">
+        <div class="row">
+            <div class="input-field col s6">
+                <input placeholder="Entrer votre mail" name="_username" type="text" class="validate">
+                <label for="_username">Email</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s6">
+                <input name="_password" type="text" class="validate">
+                <label for="_password">Mot de passe</label>
+            </div>
+        </div>
+        <button type="submit" class="btn btn-success">Connexion</button>
+    </form>
+
+{% endblock %}

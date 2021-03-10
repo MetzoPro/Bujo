@@ -1,0 +1,41 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+    {% for flashError in app.flashes('verify_email_error') %}
+        <div class="alert alert-danger" role="alert">{{ flashError }}</div>
+    {% endfor %}
+
+    {{ form_start(registrationForm) }}
+
+<div class="row" style="margin-left: 30%">
+    <h5>Veuillez renseigner vos informations:</h5>
+    <form class="col s8">
+        <div class="row">
+            <div class="input-field col s6">
+                {{ form_row(registrationForm.firstName, {'label':'Prénom','attr':{'placeholder':'Entrer votre prénom'}}) }}
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s6">
+                {{ form_row(registrationForm.lastName, {'label':'Nom','attr':{'placeholder':'Entrer votre nom'}}) }}
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s6">
+                {{ form_row(registrationForm.email, {'label':'Email','attr':{'placeholder':'exemple@gmail.com'}}) }}
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s6">
+                {{ form_row(registrationForm.password, {'label':'Mot de passe','attr':{'placeholder':'Entrer votre mot de passe'}}) }}
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s6">
+                {{ form_row(registrationForm.confirmPassword, {'label':'Confirmation mot de passe','attr':{'placeholder':'Confirmez le mot de passe'}}) }}
+            </div>
+        </div>
+
+        <button type="submit" class="btn">Inscription</button>
+
+    {{ form_end(registrationForm) }}
+{% endblock %}
