@@ -52,6 +52,11 @@ class User implements UserInterface
      */
     private $isVerified = false;
 
+    /**
+     * @ORM\ManyToOne(targetEntity=Journal::class, inversedBy="user")
+     */
+    private $journal;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -145,6 +150,18 @@ class User implements UserInterface
     public function setIsVerified(bool $isVerified): self
     {
         $this->isVerified = $isVerified;
+
+        return $this;
+    }
+
+    public function getJournal(): ?Journal
+    {
+        return $this->journal;
+    }
+
+    public function setJournal(?Journal $journal): self
+    {
+        $this->journal = $journal;
 
         return $this;
     }

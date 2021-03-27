@@ -10,7 +10,7 @@ use Symfony\Component\Routing\Annotation\Route;
 class PlaningController extends AbstractController
 {
     /**
-     * @Route("/planing", name="planing")
+     * @Route("/planning", name="planning")
      */
     public function index(CalendarRepository $calendar)
     {

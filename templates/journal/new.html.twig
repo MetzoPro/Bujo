@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+<title>New Journal</title>
+        <link rel="stylesheet" href={{ asset('css/style4.css') }}>
+<div id="new">
+
+
+        <h1 class="cr">Create new Journal</h1>
+
+        {{ include('journal/_form.html.twig') }}
+
+        <button class="btn"><a  href="{{ path('journal_index') }}">back to list</a></button>
+
+</div>
+{% endblock %}

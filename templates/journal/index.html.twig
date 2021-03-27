@@ -1,0 +1,45 @@
+
+
+
+{% block body %}
+    <link rel="stylesheet" href={{ asset('css/style3.css') }}>
+
+    <div class="container">
+            <div class="card-header">
+                <div class="table">
+                    <h1> Mon journal</h1>
+                    {% for journal in journals %}
+                        <td >
+                           <p id="title">{{  journal.title }}</p>
+                        </td>
+                        <br>
+                        <td>
+                            {{ journal.date ? journal.date|date('Y-m-d') : '' }}
+                        </td>
+                        <br>
+                        <div style="width: 70%">
+                            <p id="text">{{ journal.content }}</p>
+                        </div>
+                    <div>
+                        <tr>
+                            <td>
+                                <a href="{{ path('journal_show', {'id': journal.id}) }}">show</a>
+                                <a href="{{ path('journal_edit', {'id': journal.id}) }}">edit</a>
+                            </td>
+                        </tr>
+                    {% else %}
+                        <tr>
+                            <td colspan="7">no records found</td>
+                        </tr>
+                    {% endfor %}
+                    </div>
+                </div>
+
+                <a href="{{ path('journal_new') }}">Create new</a>
+            </div>
+    </div>
+
+{% endblock %}
+
+
+

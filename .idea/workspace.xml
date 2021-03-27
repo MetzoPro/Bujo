@@ -1,7 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d53f9b88-a698-4a6a-a031-6af89f103750" name="Default Changelist" comment="" />
+    <list default="true" id="d53f9b88-a698-4a6a-a031-6af89f103750" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/css/style5.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/Version20210301195057.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/Version20210309200250.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/style2.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/style2.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/menu.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/menu.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/pictures/flower1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/pictures/flower1.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/pictures/flower2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/pictures/flower2.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/pictures/flower5.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/pictures/flower5.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/pictures/flower7.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/pictures/flower7.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/style3.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/PlaningController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/PlaningController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/style4.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Activity.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Calendar.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/User.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/home/home.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/home/home.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/home/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/home/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/planing/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/planing/index.html.twig" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -9,9 +33,7 @@
   </component>
   <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
-    <execution>
-      <executable />
-    </execution>
+    <execution />
   </component>
   <component name="DatabaseView">
     <option name="SHOW_INTERMEDIATE" value="true" />
@@ -34,6 +56,9 @@
         <option value="CSS File" />
       </list>
     </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
@@ -147,16 +172,23 @@
   <component name="ProjectId" id="1pIYhemAKipU0YjnXmUJt0q7JhC" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="ServiceViewManager">
     <option name="viewStates">
@@ -170,6 +202,7 @@
       </list>
     </option>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -182,20 +215,13 @@
       <updated>1614872193635</updated>
       <workItem from="1614872206797" duration="21551000" />
       <workItem from="1615314042218" duration="10356000" />
+      <workItem from="1615904272277" duration="8057000" />
+      <workItem from="1616106940560" duration="700000" />
+      <workItem from="1616526759503" duration="53883000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="465" y="238" key="com.intellij.ide.util.TipDialog" timestamp="1615314076904">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="465" y="238" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1615314076904" />
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1615323435832">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1615323435832" />
+    <option name="version" value="3" />
   </component>
 </project>

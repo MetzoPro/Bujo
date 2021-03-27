@@ -1,0 +1,159 @@
+
+{% block javascripts %}
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.5.1/main.min.js"
+            integrity="sha256-rPPF6R+AH/Gilj2aC00ZAuB2EKmnEjXlEWx5MkAp7bw="
+            crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="js/menu.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.debug.js"</script>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.js">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.debug.js"</script>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script>
+        var div = document.querySelector("#SomeHtml");
+
+
+        function generatePdf(div , paysage) {
+            var element = document.querySelector(div);
+
+            //img.rotate(angle);
+            var imgData;
+            html2canvas(element, {
+                useCORS: true,
+                onrendered: function (canvas) {
+
+                    imgData = canvas.toDataURL('pictures/jpg');
+
+                    var doc = new jsPDF('p', 'pt', 'a4');
+                    if (paysage){
+                        doc.addImage(imgData, 'PNG', 570, 310, 800, 500,0,0,90);
+                    }else {
+                        doc.addImage(imgData, 'PNG', 10, 0, 600, 800);
+                    }
+                    doc.save('same-file.pdf');
+                    window.open(imgData);
+                }
+            })
+        }
+
+
+    </script>
+{% endblock %}
+{% block body %}
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href={{ asset('css/style5.css') }}>
+
+    <div id="prc">
+    <div  id="SomeHtml" class="container">
+        <div class="card">
+            <div id="imgBx0" class="imgBx" >
+                <img  src="trackers/trancker1.jpg" alt="" >
+            </div>
+
+            <div class="content">
+                <h2>tracker</h2>
+                <button onclick="generatePdf('#imgBx0',true)" class="btn btn-success"> download</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="SomeHtml" class="container">
+        <div  class="card">
+            <div id="imgBx2" class="imgBx">
+                <img src="trackers/trancker2.jpg" alt="">
+            </div>
+
+            <div class="content">
+                <h2>tracker</h2>
+                <button onclick="generatePdf('#imgBx2',true)" class="btn btn-success"> download</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="SomeHtml" class="container">
+        <div class="card">
+            <div id="imgBx3" class="imgBx">
+                <img src="trackers/trancker3.jpg" alt="">
+            </div>
+
+            <div class="content">
+                <h2>tracker</h2>
+                <button onclick="generatePdf('#imgBx3', true)" class="btn btn-success"> download</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="SomeHtml" class="container">
+        <div class="card">
+            <div id="imgBx4" class="imgBx">
+                <img src="trackers/trancker4.jpg" alt="">
+            </div>
+
+            <div class="content">
+                <h2>tracker</h2>
+                <button onclick="generatePdf('#imgBx4',true)" class="btn btn-success"> download</button>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <div id="prc">
+        <div id="SomeHtml" class="container">
+            <div class="card">
+                <div id="imgBx5" class="imgBx">
+                    <img src="trackers/trankers6.png" alt="">
+                </div>
+
+                <div class="content">
+                    <h2>tracker</h2>
+                    <button onclick="generatePdf('#imgBx5',false)" class="btn btn-success"> download</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="SomeHtml" class="container">
+            <div class="card">
+                <div id="imgBx6" class="imgBx">
+                    <img src="trackers/tranckers7.jpg" alt="">
+                </div>
+
+                <div class="content">
+                    <h2>tracker</h2>
+                    <button onclick="generatePdf('#imgBx6',false)" class="btn btn-success"> download</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="SomeHtml" class="container">
+            <div class="card">
+                <div id="imgBx7" class="imgBx">
+                    <img src="trackers/trancker10.png" alt="">
+                </div>
+
+                <div class="content">
+                    <h2>tracker</h2>
+                    <button onclick="generatePdf('#imgBx7',false)" class="btn btn-success"> download</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="SomeHtml" class="container">
+            <div class="card">
+                <div id="imgBx8" class="imgBx">
+                    <img src="trackers/tranckers9.png" alt="">
+                </div>
+
+                <div class="content">
+                    <h2>tracker</h2>
+                    <button onclick="generatePdf('#imgBx8',false)" class="btn btn-success"> download</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

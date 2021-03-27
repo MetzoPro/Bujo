@@ -1,0 +1,39 @@
+
+.container{
+    margin-left:10% ;
+    margin-right: 10%;
+    background: linear-gradient(to top,cyan, white);
+    height: 150%;
+
+}
+.card{
+    width: 90%;
+    background-color:#bebebf;
+    border: 1px solid #ccc;
+    margin-bottom: 30px;
+    transition: 0.3s;
+    margin-left:10% ;
+
+}
+.card-header{
+    text-align: center;
+    padding: 20px 10px;
+    background: linear-gradient(to top, pink, white);
+    margin-left:2% ;
+    height: 94%;
+    margin-right: 2%;
+
+}
+#title{
+  font-size: 40px;
+    text-shadow: 20px 30px 1px RGBa(0,0,160,0.3), 10px 10px 10px RGBa(160,0,160,0.8);
+
+}
+#text{
+    margin-left: 20%;
+    font-size: 40px;
+    text-shadow: #FC0 1px 0 10px;
+    overflow: hidden;
+    width: 100%;
+}
+
